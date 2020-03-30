@@ -8,17 +8,22 @@
 
   <div class="row" style="margin-top: 10px" *ngIf="send">
 
-    <div class="col-md-8 col-lg-8 col-sm-8">
+    <div class="col-md-4 col-lg-4 col-sm-4 col-xl-4">
+      <div class='col'>
+        <div>
+          <app-doughnut-chart [data]='TotalData'></app-doughnut-chart>
+        </div>
+        <div>
+          <app-barrepresent [countryData]='barChartValue'></app-barrepresent>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-lg-8 col-sm-8 col-xl-8">
       <app-tablerep></app-tablerep>
     </div>
 
     <!-- <div class="col-md-1 col-lg-1 col-sm-1"></div> -->
-    <div class="col-md-4 col-lg-4 col-sm-4">
-      <div class='col'>
-        <app-doughnut-chart [data]='TotalData'></app-doughnut-chart>
-        <app-barrepresent [countryData]='barChartValue'></app-barrepresent>
-      </div>
-    </div>
+
 
 
 
