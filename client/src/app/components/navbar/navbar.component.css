@@ -1,0 +1,10 @@
+
+#nav :hover {
+  cursor: pointer;
+}
+body {
+  font-size: 20px;
+}
+.navbar{
+  position: relative;
+}
