@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ICountryCase } from '../../model/case.modle';
 import { GetdataService } from '../../services/getdata.service';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-tablerep',
   templateUrl: './tablerep.component.html',
@@ -16,11 +16,6 @@ export class TablerepComponent implements OnInit {
   ngOnInit() {
     this.data = this._serviceData.getSavedData();
     this.Filterdata = this.data;
-    // this.Filterdata.map((data: any) => {
-    //   this._serviceData.getPopulation(data.name).subscribe((countrydata: any) => {
-    //     this.countryPopulation.push(countrydata.population);
-    //   })
-    // })
 
   }
 
