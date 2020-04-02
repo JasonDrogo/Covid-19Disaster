@@ -14,7 +14,7 @@ export class TablerepComponent implements OnInit {
   _enteredtext: string;
   constructor(private _serviceData: GetdataService) { }
   ngOnInit() {
-    this.data = this._serviceData.getSavedData();
+    this.data = [...this._serviceData.getSavedData()];
     this.Filterdata = this.data;
 
   }
@@ -22,7 +22,7 @@ export class TablerepComponent implements OnInit {
   set enteredtext(newValue: string) {
     this._enteredtext = newValue;
     console.log(newValue);
-    this.Filterdata = this._enteredtext ? this.filterdata(this._enteredtext) : this.data;;
+    this.Filterdata = this._enteredtext ? this.filterdata(this._enteredtext) : this.data;
   }
   filterdata(filtertext: string) {
     // console.log(enteredtext);
