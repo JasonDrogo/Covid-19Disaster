@@ -15,7 +15,7 @@ export class GetdataService {
 
   public getLiveData(): Observable<any> {
     const headers = new HttpHeaders({ "Access-Control-Allow-Credentials": "true" })
-    return this._http.get<any>("http://localhost:4000/users", { headers });
+    return this._http.get<any>("http://localhost:3001/users", { headers });
   }
   public saveData(data: ICountryCase[]): boolean {
     this.dataGathered = [...data];
@@ -25,10 +25,6 @@ export class GetdataService {
   }
   public getSavedData(): any {
     return this.dataGathered;
-  }
-  public getPopulation(name: string): Observable<any> {
-
-    return this._http.get<any>(`https://restcountries.eu/rest/v2/name/${name}?fullText=true`);
   }
 
 }
