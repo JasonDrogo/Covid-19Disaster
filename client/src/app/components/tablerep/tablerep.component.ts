@@ -21,7 +21,6 @@ export class TablerepComponent implements OnInit {
 
   set enteredtext(newValue: string) {
     this._enteredtext = newValue;
-    console.log(newValue);
     this.Filterdata = this._enteredtext ? this.filterdata(this._enteredtext) : this.data;
   }
   filterdata(filtertext: string) {
