@@ -1,31 +1,23 @@
-<div class="row">
-  <div class="col-md-3">
-    <div class="card">
+<div style="background-color: gray" class="card">
+  <div style="text-align: center">
+    <div id="maincounter-wrap" style="margin-top:15px">
+      <h1>Total CoronaVirus Cases:</h1>
+      <div class="maincounter-number">
+        <span style="color:#aaa"> {{data.cases.total}} </span>
+      </div>
+    </div>
 
-      <div class="container">
-        <h4><b>CoronaVirus Confirmed Cases</b></h4>
-        <p><strong>{{data.confirmed}}</strong></p>
+    <div id="maincounter-wrap" style="margin-top:15px">
+      <h1>Total Deaths:</h1>
+      <div class="maincounter-number">
+        <span style="color: red">{{data.deaths.total}}</span>
+      </div>
+    </div>
+    <div id="maincounter-wrap" style="margin-top:15px;">
+      <h1>Total Recovered:</h1>
+      <div class="maincounter-number" style="color:#8ACA2B ">
+        <span>{{data.cases.recovered}}</span>
       </div>
     </div>
   </div>
-  <div class="col-md-3">
-    <div class="card">
-
-      <div class="container">
-        <h4><b>Total Deaths</b></h4>
-        <p style="color: darkred"><strong>{{data.deaths}}</strong></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="card">
-
-      <div class="container">
-        <h4><b>Total Recovered</b></h4>
-        <p style="color: darkgreen;"><strong>{{data.recovered}}</strong></p>
-      </div>
-    </div>
-  </div>
-
-
 </div>

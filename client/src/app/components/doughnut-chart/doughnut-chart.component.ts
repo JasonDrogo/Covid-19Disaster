@@ -11,7 +11,7 @@ import { ICountryCase } from '../../model/case.modle';
 })
 export class DoughnutChartComponent implements OnInit {
   @Input()
-  data: IDoughnutData;
+  data: ICountryCase;
   public doughnutChartLabels = ['Confirmed', 'Deaths', 'Recovered'];
   public doughnutChartData = [];
   public doughnutChartColors = [
@@ -23,7 +23,7 @@ export class DoughnutChartComponent implements OnInit {
   constructor(private _serviceData: GetdataService) { }
   ngOnInit() {
 
-    this.doughnutChartData.push(this.data.confirmed, this.data.deaths, this.data.recovered);
+    this.doughnutChartData.push(this.data.cases.total, this.data.deaths.total, this.data.cases.recovered);
 
   }
 }

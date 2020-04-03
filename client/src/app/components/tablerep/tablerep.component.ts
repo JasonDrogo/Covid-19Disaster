@@ -8,13 +8,16 @@ import * as $ from 'jquery';
   styleUrls: ['./tablerep.component.css']
 })
 export class TablerepComponent implements OnInit {
+
   data: any
   Filterdata: any;
   countryPopulation: number[] = [];
   _enteredtext: string;
   constructor(private _serviceData: GetdataService) { }
   ngOnInit() {
-    this.data = [...this._serviceData.getSavedData()];
+    console.log(this.data);
+    this.data = [...this._serviceData.getSavedData().slice(1)];
+
     this.Filterdata = this.data;
 
   }
@@ -25,6 +28,6 @@ export class TablerepComponent implements OnInit {
   }
   filterdata(filtertext: string) {
     // console.log(enteredtext);
-    return this.data.filter((datas: any) => (datas.name.toLowerCase()).indexOf(filtertext.toLowerCase()) !== -1)
+    return this.data.filter((datas: any) => (datas.country.toLowerCase()).indexOf(filtertext.toLowerCase()) !== -1)
   }
 }

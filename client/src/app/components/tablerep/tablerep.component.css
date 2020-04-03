@@ -1,8 +1,8 @@
 
 body {
   background-color: lightgray;
-
-    font-size: 15px;
+   border-style:double;
+       font-size: 15px;
   }
   .table{
       border-radius: 15px
