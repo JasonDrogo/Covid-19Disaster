@@ -33,19 +33,16 @@ export class BarrepresentComponent implements OnInit {
   };
 
   public barChartLabels: Label[] = [];
-  public barChartType: ChartType = 'bar';
+  public barChartType: ChartType = 'line';
   public barChartLegend = true;
   public barChartPlugins = [];
-  public barChartColors: [
 
-    { backgroundColor: ["#86c7f3", "#FF0000", "#006400", "#006400", "#FF0000"] },
-    { borderColor: ["#D68910", "#FF0000", "#006400", "#FF0000", "#FF0000"] }];
   public barChartData: ChartDataSets[] = [
     {
-      data: [], label: 'TotalCases', backgroundColor: ["#86c7f3", "#86c7f3", "#86c7f3", "#86c7f3", "#86c7f3"]
+      data: [], label: 'TotalCases', backgroundColor: 'grey', borderColor: 'black'
     },
     {
-      data: [], label: 'TotalDeaths', backgroundColor: ["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"]
+      data: [], label: 'Deaths', backgroundColor: ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"]
     }
   ];
 

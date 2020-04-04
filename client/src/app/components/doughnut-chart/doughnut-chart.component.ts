@@ -16,9 +16,9 @@ export class DoughnutChartComponent implements OnInit {
   public doughnutChartData = [];
   public doughnutChartColors = [
 
-    { backgroundColor: ["#FF4500", "#FF0000", "#006400"] },
-    { borderColor: ["#D68910", "#FF0000", "#006400"] }];
-  public doughnutChartType = 'doughnut';
+    { backgroundColor: ["#566D7E", "#000000", "#6C7D55"] },
+    { borderColor: ["#D68910", "#000000", "#006400"] }];
+  public doughnutChartType = 'pie';
 
   constructor(private _serviceData: GetdataService) { }
   ngOnInit() {

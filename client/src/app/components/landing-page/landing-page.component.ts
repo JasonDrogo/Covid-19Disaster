@@ -22,7 +22,8 @@ export class LandingPageComponent implements OnInit {
 
 
 
-    this.barChartValue = [... this._dataService.getSavedData().slice(1, 5)];
+    this.barChartValue = [... this._dataService.getSavedData().slice(2, 7)];
+    
     this.doughnut = this._dataService.getDoughnutData();
     this.setFlag();
 

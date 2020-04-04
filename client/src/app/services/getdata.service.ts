@@ -13,7 +13,7 @@ export class GetdataService {
   constructor(private _http: HttpClient) { }
   public getLiveData(): Observable<any> {
     const headers = new HttpHeaders({ "Access-Control-Allow-Credentials": "true" })
-    return this._http.get<any>("http://localhost:3001/users", { headers });
+    return this._http.get<any>("/users", { headers });
   }
   public saveData(data: ICountryCase[]) {
     this.AllCountriesData = [...data];
