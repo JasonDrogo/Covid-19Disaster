@@ -1,22 +1,29 @@
-<div>
+<div class='card'>
   <div style="text-align: center">
-    <div id="maincounter-wrap" style="margin-top:15px">
-      <h1>CoronaVirus Cases:</h1>
+    <div id="maincounter-wrap" style="margin-top:10px">
+      <h2>{{name}}</h2>
+
+    </div>
+    <div id="maincounter-wrap" style="margin-top:10px">
+      <h2>Coronavirus Cases</h2>
       <div class="maincounter-number">
-        <span style="color:#aaa"> {{data.cases.total}} </span>
+        <span *ngIf="data[0].cases.total != undefined" style="color:#aaa"> {{data[0].cases.total}} </span>
+        <span *ngIf="data[0].cases.total == undefined" style="color:#aaa"> NA</span>
       </div>
     </div>
 
-    <div id="maincounter-wrap" style="margin-top:15px">
-      <h1>Deaths:</h1>
+    <div id="maincounter-wrap" style="margin-top:10px">
+      <h2>Deaths</h2>
       <div class="maincounter-number">
-        <span style="color: red">{{data.deaths.total}}</span>
+        <span *ngIf="data[0].deaths.total != undefined" style="color: red">{{data[0].deaths.total }}</span>
+        <span *ngIf="!data[0].deaths.total == undefined" style="color: red">NA</span>
       </div>
     </div>
-    <div id="maincounter-wrap" style="margin-top:15px;">
-      <h1>Recovered:</h1>
+    <div id="maincounter-wrap" style="margin-top:10px;">
+      <h2>Recovered</h2>
       <div class="maincounter-number" style="color:#8ACA2B ">
-        <span>{{data.cases.recovered}}</span>
+        <span *ngIf="data[0].cases.recovered != undefined">{{data[0].cases.recovered }}</span>
+        <span *ngIf="!data[0].cases.recovered == undefined">NA</span>
       </div>
     </div>
   </div>

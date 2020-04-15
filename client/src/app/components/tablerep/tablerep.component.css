@@ -1,6 +1,6 @@
 
 body {
-
+margin-top: 15px;
    border-style:outset;
        font-size: 15px;
   }
@@ -9,7 +9,7 @@ body {
   }
 #search{
   border-radius: 10px;
-
+  border-style: ridge
 }
 th{
   border-radius: 15px;

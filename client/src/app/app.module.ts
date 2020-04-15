@@ -11,7 +11,9 @@ import { ChartsModule } from 'ng2-charts';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardDisplayComponent } from './components/card-display/card-display.component';
 import { BarrepresentComponent } from './components/barrepresent/barrepresent.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChroplethComponent } from './components/chropleth/chropleth.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { BarrepresentComponent } from './components/barrepresent/barrepresent.co
     DoughnutChartComponent,
     NavbarComponent,
     CardDisplayComponent,
-    BarrepresentComponent
+    BarrepresentComponent,
+    ChroplethComponent
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import { BarrepresentComponent } from './components/barrepresent/barrepresent.co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

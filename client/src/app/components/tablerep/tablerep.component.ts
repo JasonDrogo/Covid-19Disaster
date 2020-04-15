@@ -16,7 +16,7 @@ export class TablerepComponent implements OnInit {
   constructor(private _serviceData: GetdataService) { }
   ngOnInit() {
     console.log(this.data);
-    this.data = [...this._serviceData.getSavedData().slice(2)];
+    this.data = [...this._serviceData.getSavedData().slice(3)];
 
     this.Filterdata = this.data;
 

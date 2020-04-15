@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 import { GetdataService } from '../../services/getdata.service';
 import { IDoughnutData } from '../../model/doughnut.model';
@@ -10,8 +10,11 @@ import { ICountryCase } from '../../model/case.modle';
   styleUrls: ['./doughnut-chart.component.css']
 })
 export class DoughnutChartComponent implements OnInit {
+  ngOnInit(): void {
+
+  }
   @Input()
-  data: ICountryCase;
+  data: any;
   public doughnutChartLabels = ['Confirmed', 'Deaths', 'Recovered'];
   public doughnutChartData = [];
   public doughnutChartColors = [
@@ -21,9 +24,10 @@ export class DoughnutChartComponent implements OnInit {
   public doughnutChartType = 'pie';
 
   constructor(private _serviceData: GetdataService) { }
-  ngOnInit() {
-
-    this.doughnutChartData.push(this.data.cases.total, this.data.deaths.total, this.data.cases.recovered);
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.data);
+    this.doughnutChartData = [];
+    this.doughnutChartData.push(this.data[0].cases.total, this.data[0].deaths.total, this.data[0].cases.recovered);
 
   }
 }

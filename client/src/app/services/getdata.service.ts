@@ -9,20 +9,20 @@ import { IDoughnutData } from '../model/doughnut.model';
   providedIn: 'root'
 })
 export class GetdataService {
-  AllCountriesData: ICountryCase[] = [];
+  AllCountriesData: any[] = [];
   constructor(private _http: HttpClient) { }
   public getLiveData(): Observable<any> {
     const headers = new HttpHeaders({ "Access-Control-Allow-Credentials": "true" })
     return this._http.get<any>("/users", { headers });
   }
-  public saveData(data: ICountryCase[]) {
+  public saveData(data: any[]) {
     this.AllCountriesData = [...data];
   }
   public getDoughnutData() {
     return this.AllCountriesData[0];
   }
 
-  public getSavedData(): ICountryCase[] {
+  public getSavedData(): any[] {
     return this.AllCountriesData;
   }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,19 +11,21 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body>
-  <nav id="nav" class="navbar navbar-expand-sm  ">
-    <ul class="navbar-nav ">
-      <img src="./../../../assets/images/corona.png" alt="" style="height: 40px;width: 40px">
-      <li class="nav-item active ">
+<body> -->
+<nav id="nav" class="navbar navbar-expand-sm  ">
+  <ul class="navbar-nav ">
+    <img src="./../../../assets/images/corona.png" alt="" class="rotate" style="height: 40px;width: 40px">
+    <li class="nav-item active ">
 
-        <a class="nav-link" href="#" style="font-weight: bolder;align-content: center;color: black">Corona-Disaster</a>
+      <a class="nav-link" href="#" style="font-weight: bolder;align-content: center;color: black">Corona-Disaster</a>
 
-      </li>
-      <li> <a class="nav-link" href="#footer" style="font-weight: bolder;color: black">Contact-Us </a></li>
-    </ul>
-  </nav>
-</body>
+    </li>
+    <li> <a class="nav-link" href="#footer" style="font-weight: bolder;color: black">Contact-Us </a></li>
+  </ul>
+</nav>
+<!-- </body>
 
-</html>
+</html> -->
+<mat-spinner style="margin-top: 10%; margin-left: 45%;" *ngIf='!send'></mat-spinner>
+
 <router-outlet *ngIf="send"></router-outlet>
