@@ -2,7 +2,6 @@
 
 A real-time dashboard displaying COVID-19 data, developed using RapidAPI.
 
-![Dashboard Screenshot](dashboard-screenshot.png)
 
 ## Table of Contents
 
@@ -31,10 +30,11 @@ This dashboard provides an interactive visualization of COVID-19 data using the 
 Follow these steps to get the COVID-19 dashboard up and running:
 
 1. Clone this repository: `git clone https://github.com/yourusername/covid19-dashboard.git`
-2. Navigate to the project directory: `cd covid19-dashboard`
-3. Install dependencies: `npm install`
-4. Set up your RapidAPI credentials in the `.env` file.
-5. Run the application: `npm start`
+2. Start the server : `npm start`
+3. Navigate to the client: `cd client`
+4. Install dependencies: `npm install`
+5. Set up your RapidAPI credentials in the `.env` file.
+6. Run the application: `npm start`
 
 ## Usage
 
@@ -54,4 +54,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Developed with ❤️ by [Your Name](https://github.com/yourusername)
+Developed with ❤️ by [Your Name](https://github.com/kumarParas7477)
