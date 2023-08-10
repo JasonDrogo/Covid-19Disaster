@@ -54,4 +54,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Developed with ❤️ by [Your Name](https://github.com/kumarParas7477)
+Developed with ❤️ by [Paras Kumar](https://github.com/kumarParas7477)
