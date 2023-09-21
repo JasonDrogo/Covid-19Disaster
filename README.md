@@ -29,7 +29,7 @@ This dashboard provides an interactive visualization of COVID-19 data using the 
 
 Follow these steps to get the COVID-19 dashboard up and running:
 
-1. Clone this repository: `git clone https://github.com/yourusername/covid19-dashboard.git`
+1. Clone this repository.
 2. Start the server : `npm start`
 3. Navigate to the client: `cd client`
 4. Install dependencies: `npm install`
